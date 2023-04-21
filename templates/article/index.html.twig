@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Categories{% endblock %}
+{% block title %}Hello ArticleController!{% endblock %}
 
 {% block body %}
 <style>
@@ -9,10 +9,7 @@
 </style>
 
 <div class="example-wrapper">
-    {% for category in categories %}
-    <ul>
-        <li><a href="{{ path('category_item', {id : category.id}) }}">{{ category.name }}</a> - {{ category.articles|length }}</li>
-    </ul>
-{% endfor %}
+    <h3>Contenu de l'article</h3>
+    <p>{{article.content}}</p>
 </div>
 {% endblock %}

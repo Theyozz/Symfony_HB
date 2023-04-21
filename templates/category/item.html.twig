@@ -9,7 +9,13 @@
 </style>
 
 <div class="example-wrapper">
-<h4>Name :</h4>
-<p>{{ category.name }}</p>
+<h3>Articles : </h3>
+{% for article in category.articles %}
+<ul> 
+    <li>
+        <a href="{{ path('article_content', {id : article.id}) }}">{{ article.title}}</a>
+    </li>
+</ul>
+{% endfor %}
 </div>
 {% endblock %}
